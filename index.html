@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kitchen Crew</title>
 <link rel="stylesheet" href="style.css">
+<script>
+try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.documentElement.setAttribute('data-theme', th); } catch (e) {}
+</script>
 </head>
 <body>
 <main>
@@ -13,7 +16,10 @@
       <h1>🍳 Kitchen Crew</h1>
       <div id="week" aria-live="polite"></div>
     </div>
-    <button class="primary" id="reroll">🎲 Reroll next week</button>
+    <div class="row">
+      <button id="theme" aria-pressed="false"></button>
+      <button class="primary" id="reroll">🎲 Reroll next week</button>
+    </div>
   </div>
 
   <div class="quote" id="quote" role="status" aria-live="polite"></div>

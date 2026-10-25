@@ -13,6 +13,9 @@
   --accent: #8ab8ff; --accent-ink: #0d1020; --ok: #8ff0b3; --okbg: #17402a;
 }
 
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
 * { box-sizing: border-box; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);

@@ -242,6 +242,29 @@ $('reset').onclick = () => ask('Erase all scores and start over?', () => {
   S = null; load(); render();
 });
 
+/* ---------- Dark / light mode ---------- */
+const THEME_KEY = 'kitchen-crew-theme';
+const root = document.documentElement;
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function currentTheme() {
+  return root.getAttribute('data-theme') || (systemDark.matches ? 'dark' : 'light');
+}
+function updateThemeButton() {
+  const dark = currentTheme() === 'dark';
+  $('theme').textContent = dark ? '☀️ Light mode' : '🌙 Dark mode';
+  $('theme').setAttribute('aria-pressed', String(dark));
+  $('theme').setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+$('theme').onclick = () => {
+  const next = currentTheme() === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore */ }
+  updateThemeButton();
+};
+systemDark.addEventListener('change', updateThemeButton);
+
 /* ---------- Start ---------- */
+updateThemeButton();
 load();
 render();
