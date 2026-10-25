@@ -34,10 +34,13 @@ try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.docu
   <section aria-labelledby="h-tasks">
     <h2 id="h-tasks">This week’s duties</h2>
     <div class="grid" id="tasks"></div>
-    <form class="row spaced" id="taskf">
-      <label for="tn" class="sr">New duty name</label>
-      <input id="tn" maxlength="30" placeholder="New duty, e.g. Wipe the table" autocomplete="off" required>
-      <label for="te" class="sr">Icon</label>
+    <form class="row spaced panel" id="taskf">
+      <div class="field grow">
+        <label for="tn">Duty name</label>
+        <input id="tn" maxlength="30" placeholder="e.g. Wipe the table" autocomplete="off" required>
+      </div>
+      <div class="field">
+      <label for="te">Icon</label>
       <select id="te">
         <option value="✨">✨ Sparkle</option>
         <option value="🍽️">🍽️ Plates</option>
@@ -59,7 +62,9 @@ try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.docu
         <option value="📦">📦 Boxes</option>
         <option value="☕">☕ Coffee machine</option>
       </select>
-      <label for="tp" class="sr">Points</label>
+      </div>
+      <div class="field">
+      <label for="tp">Points</label>
       <select id="tp">
         <option value="1">1 pt</option>
         <option value="2" selected>2 pts</option>
@@ -67,6 +72,7 @@ try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.docu
         <option value="4">4 pts</option>
         <option value="5">5 pts</option>
       </select>
+      </div>
       <button class="primary" type="submit">Add duty</button>
     </form>
   </section>
@@ -79,10 +85,12 @@ try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.docu
   <section aria-labelledby="h-crew">
     <h2 id="h-crew">The crew</h2>
     <div class="row" id="crew"></div>
-    <form class="row spaced" id="addf">
-      <label for="nm" class="sr">New member name</label>
-      <input id="nm" maxlength="14" placeholder="Add a housemate" autocomplete="off">
-      <button class="primary" type="submit">Add</button>
+    <form class="row spaced panel" id="addf">
+      <div class="field grow">
+        <label for="nm">Housemate name</label>
+        <input id="nm" maxlength="14" placeholder="e.g. Jamie" autocomplete="off">
+      </div>
+      <button class="primary" type="submit">Add housemate</button>
     </form>
   </section>
 

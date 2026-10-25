@@ -66,4 +66,13 @@ ol.board svg { width: 44px; height: 44px; }
 .chip { display: inline-flex; gap: 6px; align-items: center; border: 2px solid var(--line); border-radius: 99px; padding: 2px 4px 2px 10px; background: var(--card); }
 .chip button { min-height: 32px; padding: 0 10px; border-width: 2px; border-radius: 99px; }
 
+.panel {
+  align-items: flex-end; gap: 14px; padding: 16px 18px;
+  background: var(--card); border: 3px solid var(--line); border-radius: 20px;
+}
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.grow { flex: 1 1 220px; }
+.field.grow input { width: 100%; }
+.field label { font-weight: 800; padding-left: 4px; }
+
 .sr { position: absolute; left: -9999px; }
