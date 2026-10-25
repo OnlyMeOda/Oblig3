@@ -12,11 +12,6 @@ A tiny, dependency-free web app for sharing kitchen duties and garbage collectio
 
 Open `index.html` in a browser. No build step needed.
 
-## Host it on GitHub Pages
-
-1. Push these files to a repo.
-2. Go to **Settings → Pages**, choose your branch and the root folder, and save.
-
 ## Files
 
 - `index.html`: structure
