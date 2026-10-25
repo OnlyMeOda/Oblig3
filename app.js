@@ -196,7 +196,7 @@ $('taskf').onsubmit = e => {
   S.tasks.push(t);
   S.assign[t.id] = who.id;
   S.msg = `New duty “${t.n}” goes to ${who.name}! 🎯`;
-  $('tn').value = ''; $('te').value = '';
+  $('tn').value = ''; $('te').selectedIndex = 0;
   save(); render();
 };
 

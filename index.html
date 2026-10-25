@@ -37,8 +37,28 @@ try { var th = localStorage.getItem('kitchen-crew-theme'); if (th) document.docu
     <form class="row spaced" id="taskf">
       <label for="tn" class="sr">New duty name</label>
       <input id="tn" maxlength="30" placeholder="New duty, e.g. Wipe the table" autocomplete="off" required>
-      <label for="te" class="sr">Emoji</label>
-      <input id="te" maxlength="2" placeholder="🍽️" size="3" autocomplete="off">
+      <label for="te" class="sr">Icon</label>
+      <select id="te">
+        <option value="✨">✨ Sparkle</option>
+        <option value="🍽️">🍽️ Plates</option>
+        <option value="🧽">🧽 Sponge</option>
+        <option value="🧹">🧹 Broom</option>
+        <option value="🧺">🧺 Laundry</option>
+        <option value="🧴">🧴 Soap</option>
+        <option value="🗑️">🗑️ Trash</option>
+        <option value="♻️">♻️ Recycling</option>
+        <option value="🍌">🍌 Food waste</option>
+        <option value="🧊">🧊 Fridge</option>
+        <option value="🔥">🔥 Stove</option>
+        <option value="🍳">🍳 Pans</option>
+        <option value="🥫">🥫 Pantry</option>
+        <option value="🪴">🪴 Plants</option>
+        <option value="🛒">🛒 Groceries</option>
+        <option value="🪟">🪟 Windows</option>
+        <option value="🚪">🚪 Door</option>
+        <option value="📦">📦 Boxes</option>
+        <option value="☕">☕ Coffee machine</option>
+      </select>
       <label for="tp" class="sr">Points</label>
       <select id="tp">
         <option value="1">1 pt</option>
