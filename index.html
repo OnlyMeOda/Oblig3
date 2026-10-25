@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kitchen Crew</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="hero">
+    <div>
+      <h1>🍳 Kitchen Crew</h1>
+      <div id="week" aria-live="polite"></div>
+    </div>
+    <button class="primary" id="reroll">🎲 Reroll next week</button>
+  </div>
+
+  <div class="quote" id="quote" role="status" aria-live="polite"></div>
+  <div class="quote ask" id="ask" role="alertdialog" aria-label="Please confirm" hidden>
+    <span id="asktxt"></span>
+    <span class="row inline">
+      <button class="primary" id="askyes">Yes</button>
+      <button id="askno">Cancel</button>
+    </span>
+  </div>
+
+  <section aria-labelledby="h-tasks">
+    <h2 id="h-tasks">This week’s duties</h2>
+    <div class="grid" id="tasks"></div>
+    <form class="row spaced" id="taskf">
+      <label for="tn" class="sr">New duty name</label>
+      <input id="tn" maxlength="30" placeholder="New duty, e.g. Wipe the table" autocomplete="off" required>
+      <label for="te" class="sr">Emoji</label>
+      <input id="te" maxlength="2" placeholder="🍽️" size="3" autocomplete="off">
+      <label for="tp" class="sr">Points</label>
+      <select id="tp">
+        <option value="1">1 pt</option>
+        <option value="2" selected>2 pts</option>
+        <option value="3">3 pts</option>
+        <option value="4">4 pts</option>
+        <option value="5">5 pts</option>
+      </select>
+      <button class="primary" type="submit">Add duty</button>
+    </form>
+  </section>
+
+  <section aria-labelledby="h-board">
+    <h2 id="h-board">🏆 Scoreboard</h2>
+    <ol class="board" id="board"></ol>
+  </section>
+
+  <section aria-labelledby="h-crew">
+    <h2 id="h-crew">The crew</h2>
+    <div class="row" id="crew"></div>
+    <form class="row spaced" id="addf">
+      <label for="nm" class="sr">New member name</label>
+      <input id="nm" maxlength="14" placeholder="Add a housemate" autocomplete="off">
+      <button class="primary" type="submit">Add</button>
+    </form>
+  </section>
+
+  <section><button id="reset">Start over</button></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
