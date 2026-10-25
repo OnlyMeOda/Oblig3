@@ -12,6 +12,18 @@ A tiny, dependency-free web app for sharing kitchen duties and garbage collectio
 
 Open `index.html` in a browser. No build step needed.
 
+## Tests
+
+End-to-end tests (Playwright) open the real page in a browser and click through it.
+
+```bash
+npm install
+npx playwright install chromium   # one time
+npm test
+```
+
+They cover duties, scoreboard, reroll, adding/removing duties and housemates, saving, dark mode and basic accessibility.
+
 ## Files
 
 - `index.html`: structure
